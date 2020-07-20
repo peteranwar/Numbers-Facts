@@ -24,9 +24,9 @@ inputNumber.addEventListener('input', getFactFetch);
 // }
 function getFactFetch() {
     let number = inputNumber.value;
-
+    let cors = "https://cors-anywhere.herokuapp.com/";
     if (number != "") {
-        fetch(`http://numbersapi.com/${number}`)
+        fetch(`${cors}http://numbersapi.com/${number}`)
         .then ( response => response.text())
         .then( data => {
             fact.style.display = 'block';
